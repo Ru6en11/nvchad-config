@@ -1,8 +1,13 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    dart = { "dart_format" },
+  },
+  formatters = {
+    dart_format = {
+      command = "dart",
+      args = { "format", "--line-length", "120" },
+    },
   },
 
   -- format_on_save = {
