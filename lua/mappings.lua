@@ -11,4 +11,5 @@ map('n', '<leader>df', function ()
   require("conform").format({async = true, lsp_fallback = true})
 end, {desc = "Code formatting"})
 
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Actions" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
